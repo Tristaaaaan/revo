@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:revo/features/dashboard/presentation/widgets/templates/teamplates_header.dart';
 import 'package:revo/features/dashboard/presentation/widgets/templates/templates_body.dart';
+import 'package:revo/features/dashboard/presentation/widgets/templates/templates_header.dart';
 
 class Templates extends StatelessWidget {
   const Templates({super.key});

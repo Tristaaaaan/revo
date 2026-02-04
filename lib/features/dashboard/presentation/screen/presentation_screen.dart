@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:revo/features/dashboard/presentation/widgets/card/info_card.dart';
 import 'package:revo/features/dashboard/presentation/widgets/info_container.dart';
-import 'package:revo/features/dashboard/presentation/widgets/recent_calls/recent_call_container.dart';
+import 'package:revo/features/dashboard/presentation/widgets/recent_calls/recent_call_page.dart';
 import 'package:revo/features/dashboard/presentation/widgets/templates/templates.dart';
 
 class DashboardScreen extends StatelessWidget {
@@ -128,10 +128,10 @@ class DashboardScreen extends StatelessWidget {
                   ],
                 ),
                 Templates(),
-                RecentCallContainer(),
               ],
             ),
           ),
+          CallHistoryPage(),
         ],
       ),
     );
