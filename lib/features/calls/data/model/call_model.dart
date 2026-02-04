@@ -28,6 +28,8 @@ abstract class CallModel with _$CallModel {
 
     required int callTime,
 
+    required String description,
+
     int? callTimeOut,
 
     int? callDuration,
@@ -45,6 +47,7 @@ abstract class CallModel with _$CallModel {
       'callerNumber': callerNumber,
       'callerAvatarUrl': callerAvatarUrl,
       'callType': callType.name,
+      'description': description,
       'callTime': callTime,
       'callTimeOut': callTimeOut,
       'callDuration': callDuration,
@@ -57,6 +60,7 @@ abstract class CallModel with _$CallModel {
       callerName: map['callerName'] as String,
       callerAvatarUrl: map['callerAvatarUrl'] as String?,
       callerNumber: map['callerNumber'] as String,
+      description: map['description'] as String,
       callType: CallType.values.firstWhere(
         (e) => e.name == map['callType'],
         orElse: () => CallType.missed,

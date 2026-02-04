@@ -13,6 +13,7 @@ _CallModel _$CallModelFromJson(Map<String, dynamic> json) => _CallModel(
   callerAvatarUrl: json['callerAvatarUrl'] as String?,
   callType: $enumDecode(_$CallTypeEnumMap, json['callType']),
   callTime: (json['callTime'] as num).toInt(),
+  description: json['description'] as String,
   callTimeOut: (json['callTimeOut'] as num?)?.toInt(),
   callDuration: (json['callDuration'] as num?)?.toInt(),
 );
@@ -25,6 +26,7 @@ Map<String, dynamic> _$CallModelToJson(_CallModel instance) =>
       'callerAvatarUrl': instance.callerAvatarUrl,
       'callType': _$CallTypeEnumMap[instance.callType]!,
       'callTime': instance.callTime,
+      'description': instance.description,
       'callTimeOut': instance.callTimeOut,
       'callDuration': instance.callDuration,
     };

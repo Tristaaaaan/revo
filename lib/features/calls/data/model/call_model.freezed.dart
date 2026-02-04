@@ -15,7 +15,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$CallModel {
 
- String get id; String get callerName; String get callerNumber; String? get callerAvatarUrl; CallType get callType; int get callTime; int? get callTimeOut; int? get callDuration;
+ String get id; String get callerName; String get callerNumber; String? get callerAvatarUrl; CallType get callType; int get callTime; String get description; int? get callTimeOut; int? get callDuration;
 /// Create a copy of CallModel
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -28,16 +28,16 @@ $CallModelCopyWith<CallModel> get copyWith => _$CallModelCopyWithImpl<CallModel>
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is CallModel&&(identical(other.id, id) || other.id == id)&&(identical(other.callerName, callerName) || other.callerName == callerName)&&(identical(other.callerNumber, callerNumber) || other.callerNumber == callerNumber)&&(identical(other.callerAvatarUrl, callerAvatarUrl) || other.callerAvatarUrl == callerAvatarUrl)&&(identical(other.callType, callType) || other.callType == callType)&&(identical(other.callTime, callTime) || other.callTime == callTime)&&(identical(other.callTimeOut, callTimeOut) || other.callTimeOut == callTimeOut)&&(identical(other.callDuration, callDuration) || other.callDuration == callDuration));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is CallModel&&(identical(other.id, id) || other.id == id)&&(identical(other.callerName, callerName) || other.callerName == callerName)&&(identical(other.callerNumber, callerNumber) || other.callerNumber == callerNumber)&&(identical(other.callerAvatarUrl, callerAvatarUrl) || other.callerAvatarUrl == callerAvatarUrl)&&(identical(other.callType, callType) || other.callType == callType)&&(identical(other.callTime, callTime) || other.callTime == callTime)&&(identical(other.description, description) || other.description == description)&&(identical(other.callTimeOut, callTimeOut) || other.callTimeOut == callTimeOut)&&(identical(other.callDuration, callDuration) || other.callDuration == callDuration));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,callerName,callerNumber,callerAvatarUrl,callType,callTime,callTimeOut,callDuration);
+int get hashCode => Object.hash(runtimeType,id,callerName,callerNumber,callerAvatarUrl,callType,callTime,description,callTimeOut,callDuration);
 
 @override
 String toString() {
-  return 'CallModel(id: $id, callerName: $callerName, callerNumber: $callerNumber, callerAvatarUrl: $callerAvatarUrl, callType: $callType, callTime: $callTime, callTimeOut: $callTimeOut, callDuration: $callDuration)';
+  return 'CallModel(id: $id, callerName: $callerName, callerNumber: $callerNumber, callerAvatarUrl: $callerAvatarUrl, callType: $callType, callTime: $callTime, description: $description, callTimeOut: $callTimeOut, callDuration: $callDuration)';
 }
 
 
@@ -48,7 +48,7 @@ abstract mixin class $CallModelCopyWith<$Res>  {
   factory $CallModelCopyWith(CallModel value, $Res Function(CallModel) _then) = _$CallModelCopyWithImpl;
 @useResult
 $Res call({
- String id, String callerName, String callerNumber, String? callerAvatarUrl, CallType callType, int callTime, int? callTimeOut, int? callDuration
+ String id, String callerName, String callerNumber, String? callerAvatarUrl, CallType callType, int callTime, String description, int? callTimeOut, int? callDuration
 });
 
 
@@ -65,7 +65,7 @@ class _$CallModelCopyWithImpl<$Res>
 
 /// Create a copy of CallModel
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? id = null,Object? callerName = null,Object? callerNumber = null,Object? callerAvatarUrl = freezed,Object? callType = null,Object? callTime = null,Object? callTimeOut = freezed,Object? callDuration = freezed,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? id = null,Object? callerName = null,Object? callerNumber = null,Object? callerAvatarUrl = freezed,Object? callType = null,Object? callTime = null,Object? description = null,Object? callTimeOut = freezed,Object? callDuration = freezed,}) {
   return _then(_self.copyWith(
 id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
 as String,callerName: null == callerName ? _self.callerName : callerName // ignore: cast_nullable_to_non_nullable
@@ -73,7 +73,8 @@ as String,callerNumber: null == callerNumber ? _self.callerNumber : callerNumber
 as String,callerAvatarUrl: freezed == callerAvatarUrl ? _self.callerAvatarUrl : callerAvatarUrl // ignore: cast_nullable_to_non_nullable
 as String?,callType: null == callType ? _self.callType : callType // ignore: cast_nullable_to_non_nullable
 as CallType,callTime: null == callTime ? _self.callTime : callTime // ignore: cast_nullable_to_non_nullable
-as int,callTimeOut: freezed == callTimeOut ? _self.callTimeOut : callTimeOut // ignore: cast_nullable_to_non_nullable
+as int,description: null == description ? _self.description : description // ignore: cast_nullable_to_non_nullable
+as String,callTimeOut: freezed == callTimeOut ? _self.callTimeOut : callTimeOut // ignore: cast_nullable_to_non_nullable
 as int?,callDuration: freezed == callDuration ? _self.callDuration : callDuration // ignore: cast_nullable_to_non_nullable
 as int?,
   ));
@@ -160,10 +161,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String id,  String callerName,  String callerNumber,  String? callerAvatarUrl,  CallType callType,  int callTime,  int? callTimeOut,  int? callDuration)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String id,  String callerName,  String callerNumber,  String? callerAvatarUrl,  CallType callType,  int callTime,  String description,  int? callTimeOut,  int? callDuration)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _CallModel() when $default != null:
-return $default(_that.id,_that.callerName,_that.callerNumber,_that.callerAvatarUrl,_that.callType,_that.callTime,_that.callTimeOut,_that.callDuration);case _:
+return $default(_that.id,_that.callerName,_that.callerNumber,_that.callerAvatarUrl,_that.callType,_that.callTime,_that.description,_that.callTimeOut,_that.callDuration);case _:
   return orElse();
 
 }
@@ -181,10 +182,10 @@ return $default(_that.id,_that.callerName,_that.callerNumber,_that.callerAvatarU
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String id,  String callerName,  String callerNumber,  String? callerAvatarUrl,  CallType callType,  int callTime,  int? callTimeOut,  int? callDuration)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String id,  String callerName,  String callerNumber,  String? callerAvatarUrl,  CallType callType,  int callTime,  String description,  int? callTimeOut,  int? callDuration)  $default,) {final _that = this;
 switch (_that) {
 case _CallModel():
-return $default(_that.id,_that.callerName,_that.callerNumber,_that.callerAvatarUrl,_that.callType,_that.callTime,_that.callTimeOut,_that.callDuration);case _:
+return $default(_that.id,_that.callerName,_that.callerNumber,_that.callerAvatarUrl,_that.callType,_that.callTime,_that.description,_that.callTimeOut,_that.callDuration);case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -201,10 +202,10 @@ return $default(_that.id,_that.callerName,_that.callerNumber,_that.callerAvatarU
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String id,  String callerName,  String callerNumber,  String? callerAvatarUrl,  CallType callType,  int callTime,  int? callTimeOut,  int? callDuration)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String id,  String callerName,  String callerNumber,  String? callerAvatarUrl,  CallType callType,  int callTime,  String description,  int? callTimeOut,  int? callDuration)?  $default,) {final _that = this;
 switch (_that) {
 case _CallModel() when $default != null:
-return $default(_that.id,_that.callerName,_that.callerNumber,_that.callerAvatarUrl,_that.callType,_that.callTime,_that.callTimeOut,_that.callDuration);case _:
+return $default(_that.id,_that.callerName,_that.callerNumber,_that.callerAvatarUrl,_that.callType,_that.callTime,_that.description,_that.callTimeOut,_that.callDuration);case _:
   return null;
 
 }
@@ -216,7 +217,7 @@ return $default(_that.id,_that.callerName,_that.callerNumber,_that.callerAvatarU
 @JsonSerializable()
 
 class _CallModel extends CallModel {
-  const _CallModel({required this.id, required this.callerName, required this.callerNumber, this.callerAvatarUrl, required this.callType, required this.callTime, this.callTimeOut, this.callDuration}): super._();
+  const _CallModel({required this.id, required this.callerName, required this.callerNumber, this.callerAvatarUrl, required this.callType, required this.callTime, required this.description, this.callTimeOut, this.callDuration}): super._();
   factory _CallModel.fromJson(Map<String, dynamic> json) => _$CallModelFromJson(json);
 
 @override final  String id;
@@ -225,6 +226,7 @@ class _CallModel extends CallModel {
 @override final  String? callerAvatarUrl;
 @override final  CallType callType;
 @override final  int callTime;
+@override final  String description;
 @override final  int? callTimeOut;
 @override final  int? callDuration;
 
@@ -241,16 +243,16 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _CallModel&&(identical(other.id, id) || other.id == id)&&(identical(other.callerName, callerName) || other.callerName == callerName)&&(identical(other.callerNumber, callerNumber) || other.callerNumber == callerNumber)&&(identical(other.callerAvatarUrl, callerAvatarUrl) || other.callerAvatarUrl == callerAvatarUrl)&&(identical(other.callType, callType) || other.callType == callType)&&(identical(other.callTime, callTime) || other.callTime == callTime)&&(identical(other.callTimeOut, callTimeOut) || other.callTimeOut == callTimeOut)&&(identical(other.callDuration, callDuration) || other.callDuration == callDuration));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _CallModel&&(identical(other.id, id) || other.id == id)&&(identical(other.callerName, callerName) || other.callerName == callerName)&&(identical(other.callerNumber, callerNumber) || other.callerNumber == callerNumber)&&(identical(other.callerAvatarUrl, callerAvatarUrl) || other.callerAvatarUrl == callerAvatarUrl)&&(identical(other.callType, callType) || other.callType == callType)&&(identical(other.callTime, callTime) || other.callTime == callTime)&&(identical(other.description, description) || other.description == description)&&(identical(other.callTimeOut, callTimeOut) || other.callTimeOut == callTimeOut)&&(identical(other.callDuration, callDuration) || other.callDuration == callDuration));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,callerName,callerNumber,callerAvatarUrl,callType,callTime,callTimeOut,callDuration);
+int get hashCode => Object.hash(runtimeType,id,callerName,callerNumber,callerAvatarUrl,callType,callTime,description,callTimeOut,callDuration);
 
 @override
 String toString() {
-  return 'CallModel(id: $id, callerName: $callerName, callerNumber: $callerNumber, callerAvatarUrl: $callerAvatarUrl, callType: $callType, callTime: $callTime, callTimeOut: $callTimeOut, callDuration: $callDuration)';
+  return 'CallModel(id: $id, callerName: $callerName, callerNumber: $callerNumber, callerAvatarUrl: $callerAvatarUrl, callType: $callType, callTime: $callTime, description: $description, callTimeOut: $callTimeOut, callDuration: $callDuration)';
 }
 
 
@@ -261,7 +263,7 @@ abstract mixin class _$CallModelCopyWith<$Res> implements $CallModelCopyWith<$Re
   factory _$CallModelCopyWith(_CallModel value, $Res Function(_CallModel) _then) = __$CallModelCopyWithImpl;
 @override @useResult
 $Res call({
- String id, String callerName, String callerNumber, String? callerAvatarUrl, CallType callType, int callTime, int? callTimeOut, int? callDuration
+ String id, String callerName, String callerNumber, String? callerAvatarUrl, CallType callType, int callTime, String description, int? callTimeOut, int? callDuration
 });
 
 
@@ -278,7 +280,7 @@ class __$CallModelCopyWithImpl<$Res>
 
 /// Create a copy of CallModel
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? callerName = null,Object? callerNumber = null,Object? callerAvatarUrl = freezed,Object? callType = null,Object? callTime = null,Object? callTimeOut = freezed,Object? callDuration = freezed,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? callerName = null,Object? callerNumber = null,Object? callerAvatarUrl = freezed,Object? callType = null,Object? callTime = null,Object? description = null,Object? callTimeOut = freezed,Object? callDuration = freezed,}) {
   return _then(_CallModel(
 id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
 as String,callerName: null == callerName ? _self.callerName : callerName // ignore: cast_nullable_to_non_nullable
@@ -286,7 +288,8 @@ as String,callerNumber: null == callerNumber ? _self.callerNumber : callerNumber
 as String,callerAvatarUrl: freezed == callerAvatarUrl ? _self.callerAvatarUrl : callerAvatarUrl // ignore: cast_nullable_to_non_nullable
 as String?,callType: null == callType ? _self.callType : callType // ignore: cast_nullable_to_non_nullable
 as CallType,callTime: null == callTime ? _self.callTime : callTime // ignore: cast_nullable_to_non_nullable
-as int,callTimeOut: freezed == callTimeOut ? _self.callTimeOut : callTimeOut // ignore: cast_nullable_to_non_nullable
+as int,description: null == description ? _self.description : description // ignore: cast_nullable_to_non_nullable
+as String,callTimeOut: freezed == callTimeOut ? _self.callTimeOut : callTimeOut // ignore: cast_nullable_to_non_nullable
 as int?,callDuration: freezed == callDuration ? _self.callDuration : callDuration // ignore: cast_nullable_to_non_nullable
 as int?,
   ));

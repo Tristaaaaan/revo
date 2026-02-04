@@ -1,6 +1,6 @@
 import 'dart:math';
 
-import 'package:revo/features/dashboard/data/model/call_model.dart';
+import 'package:revo/features/calls/data/model/call_model.dart';
 
 class MockCallData {
   static final _random = Random();
@@ -17,7 +17,13 @@ class MockCallData {
     'Ian Walker',
     'Julia Hall',
   ];
-
+  static final _descriptions = [
+    'Service inquiries',
+    'Follow up',
+    'Spam calls',
+    'Emergency lockouts',
+    'After-hours calls',
+  ];
   static final _avatars = [
     'https://i.pravatar.cc/150?img=1',
     'https://i.pravatar.cc/150?img=2',
@@ -48,6 +54,7 @@ class MockCallData {
     final type = _callTypes[_random.nextInt(_callTypes.length)];
     final number = _generatePhoneNumber();
 
+    final description = _descriptions[_random.nextInt(_descriptions.length)];
     // Generate a call time within the last 30 days
     final now = DateTime.now();
     final callTime = now
@@ -72,6 +79,7 @@ class MockCallData {
       callerAvatarUrl: avatar,
       callType: type,
       callTime: callTime,
+      description: description,
       callTimeOut: callTime + duration * 1000,
       callDuration: duration,
     );

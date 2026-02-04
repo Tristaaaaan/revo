@@ -1,5 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:revo/features/dashboard/data/model/call_model.dart';
+import 'package:revo/features/calls/data/model/call_model.dart';
 
 part 'call_states.freezed.dart';
 
