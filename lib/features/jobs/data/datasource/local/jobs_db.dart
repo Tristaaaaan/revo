@@ -13,7 +13,7 @@
 //     'Ian Walker',
 //     'Julia Hall',
 //   ];
-//   static final _descriptions = [
+//   static final _businessAddress = [
 //     'Service inquiries',
 //     'Follow up',
 //     'Spam calls',
