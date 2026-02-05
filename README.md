@@ -77,7 +77,7 @@ This application enables user to manage business calls with ease.
 - **Templates:** Page-level scaffolds/layouts
 
 **Design Tokens:**  
-All colors, typography, and spacing live in `core/theme/` to ensure consistency across the app.
+All colors, typography, and spacing live in `core/appdesign/` to ensure consistency across the app.
 
 ## Firebase Assumptions
 
@@ -88,6 +88,26 @@ All colors, typography, and spacing live in `core/theme/` to ensure consistency 
   This collection contains the jobs sources.
 
 -
+
+## How to Use the Project
+
+Ensure that Flutter is already installed on your computer.
+
+1. Clone the project
+
+```
+git clone https://github.com/Tristaaaaan/revo
+```
+
+2. Open the project on your preferred IDE and add dependencies:
+
+```
+flutter pub get
+```
+
+3. Run the project:
+
+- In VS Code, click the Run and Debug icon on the left sidebar, then select the environment you want to run.
 
 ## Development Details
 
