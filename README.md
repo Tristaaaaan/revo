@@ -1,6 +1,6 @@
 # revo
 
-This application enables user to manage calls with ease.
+This application enables user to manage business calls with ease.
 
 ## Folder Structure
 
@@ -34,15 +34,13 @@ This application enables user to manage calls with ease.
     │   │   ├── prod/
     │   │   ├── stg/
     │   ├── core/                 # Global utilities, configs, theme, DI
-    │   │   ├── constants/        # App-wide constants
-    │   │   ├── appimages/            # Helper functions (validators, date formatters)
-    │   │   ├── approutes/          # App routing & navigation
-    │   │   ├── apptext/               # Dependency injection / service locator
-    │   │   ├── theme/            # Colors, typography, spacing, theme data
-    │   │   └── extensions/       # Dart extensions (String, DateTime, etc.)
+    │   │   ├── appimages/        # Helper images
+    │   │   ├── approutes/        # Helper routes
+    │   │   ├── apptext/          # Helper text
+    │   │   └── apptheme/         # Helper theme
     │   │
     │   ├── shared/               # Shared resources across features
-    │   │   ├── widgets/          # Atomic design: atoms, molecules, organisms, templates
+    │   │   ├── widgets/          # Common Widgets
     │   │   ├── models/           # Shared models
     │   │   └── enums/            # Shared enums
     │   │
@@ -64,15 +62,12 @@ This application enables user to manage calls with ease.
     │   │   │   ├── domain/       # Entities, repositories, use cases
     │   │   │   └── presentation/ # Pages, Cubits/BLoCs, widgets
     │   │   └── other_features/   # Add features here following same pattern
-    │   │
-    │   ├── l10n/                 # Localization files (.arb)
-    │   └── generated/            # Generated code (JSON serialization, localization, etc.)
     │
     ├── test/                     # Automated tests (unit, widget)
     ├── tools/                    # Tools and utilities
-    ├── pubspec.yaml               # Project dependencies
-    ├── LICENSE                    # License file
-    └── README.md                  # Project overview and instructions
+    ├── pubspec.yaml              # Project dependencies
+    ├── LICENSE                   # License file
+    └── README.md                 # Project overview and instructions
 
 ## Atomic Design Approach (shared/widgets)
 
