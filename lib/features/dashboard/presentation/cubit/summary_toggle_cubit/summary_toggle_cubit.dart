@@ -1,6 +1,5 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-
-enum SummaryToggleOption { totalCalls, totalQuality, callBehavior }
+import 'package:revo/shared/enum/shared_enums.dart';
 
 class SummaryToggleCubit extends Cubit<SummaryToggleOption> {
   SummaryToggleCubit() : super(SummaryToggleOption.totalCalls);

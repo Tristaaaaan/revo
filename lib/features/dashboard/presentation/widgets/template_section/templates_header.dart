@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:revo/common/component/button/text_button.dart';
+import 'package:revo/shared/widgets/button/text_button.dart';
 
 class TeamplatesHeader extends StatelessWidget {
   const TeamplatesHeader({super.key});

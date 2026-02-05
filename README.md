@@ -1,8 +1,8 @@
 # revo
 
-A new Flutter project.
+This application enables user to manage calls with ease.
 
-## Folder
+## Folder Structure
 
 ### Top Level
 
@@ -10,7 +10,6 @@ A new Flutter project.
     │
     ├─ android/
     ├─ ios/
-    ├─ web/
     ├─ assets/
     │   ├─ fonts/
     │   ├─ images/
@@ -21,27 +20,24 @@ A new Flutter project.
     ├─ pubspec.yaml
     └─ README.md
 
-### Top Level
+### lib/
 
     revo/
-    ├── android/                  # Native Android code
-    ├── ios/                      # Native iOS code
-    ├── web/                      # Web platform code
-    ├── assets/                   # Static assets
-    │   ├── fonts/                # Custom fonts
-    │   ├── images/               # App images
-    │   └── icons/                # App icons
-    ├── build/                    # Compiled files (Flutter build outputs)
-    ├── docs/                     # Documentation files
     ├── lib/                      # Source files
-    │   ├── main.dart             # App entry point
-    │   ├── app.dart              # Root widget, theme, navigation
+    │   ├── main_production.dart  # Production entry point
+    │   ├── main_staging.dart     # Development entry point
+    │   ├── main_development.dart # Staging entry point
     │   │
+    │   ├── config/               # Handle app environment
+    │   ├── firebase/             # Firebase Option for each environment
+    │   │   ├── dev/
+    │   │   ├── prod/
+    │   │   ├── stg/
     │   ├── core/                 # Global utilities, configs, theme, DI
     │   │   ├── constants/        # App-wide constants
-    │   │   ├── utils/            # Helper functions (validators, date formatters)
-    │   │   ├── routing/          # App routing & navigation
-    │   │   ├── di/               # Dependency injection / service locator
+    │   │   ├── appimages/            # Helper functions (validators, date formatters)
+    │   │   ├── approutes/          # App routing & navigation
+    │   │   ├── apptext/               # Dependency injection / service locator
     │   │   ├── theme/            # Colors, typography, spacing, theme data
     │   │   └── extensions/       # Dart extensions (String, DateTime, etc.)
     │   │
@@ -55,12 +51,18 @@ A new Flutter project.
     │   │   │   ├── data/         # Data sources, repositories, models
     │   │   │   ├── domain/       # Entities, repositories, use cases
     │   │   │   └── presentation/ # Pages, Cubits/BLoCs, widgets
-    │   │   │
-    │   │   ├── chat/
-    │   │   │   ├── data/
-    │   │   │   ├── domain/
-    │   │   │   └── presentation/
-    │   │   │
+    │   │   ├── calls/
+    │   │   │   ├── data/         # Data sources, repositories, models
+    │   │   │   ├── domain/       # Entities, repositories, use cases
+    │   │   │   └── presentation/ # Pages, Cubits/BLoCs, widgets
+    │   │   ├── jobs/
+    │   │   │   ├── data/         # Data sources, repositories, models
+    │   │   │   ├── domain/       # Entities, repositories, use cases
+    │   │   │   └── presentation/ # Pages, Cubits/BLoCs, widgets
+    │   │   ├── users/
+    │   │   │   ├── data/         # Data sources, repositories, models
+    │   │   │   ├── domain/       # Entities, repositories, use cases
+    │   │   │   └── presentation/ # Pages, Cubits/BLoCs, widgets
     │   │   └── other_features/   # Add features here following same pattern
     │   │
     │   ├── l10n/                 # Localization files (.arb)
@@ -85,10 +87,12 @@ All colors, typography, and spacing live in `core/theme/` to ensure consistency 
 ## Firebase Assumptions
 
 - **Auth:** `users` collection
-- **Chat:** `chatRooms/{roomId}/messages` subcollection
-- **Profiles:** `users` collection with profile info
-- **Settings:** `userPreferences` per user
-- **Streams:** Real-time updates for chat and user presence
+  This collection contains the information submitted by the user, this includes their personal information and business information.
+
+- **Job Sources:** `jobs` collection
+  This collection contains the jobs sources.
+
+-
 
 ## Core Technologies
 

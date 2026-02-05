@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:revo/common/component/button/regular_button/regular_button_cubit.dart';
+import 'package:revo/shared/widgets/button/regular_button/regular_button_cubit.dart';
 
 class RegularButton extends StatelessWidget {
   final String text;
