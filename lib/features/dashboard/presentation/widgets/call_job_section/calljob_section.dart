@@ -4,13 +4,13 @@ import 'package:revo/features/calls/data/repo/call_repo_impl.dart';
 import 'package:revo/features/calls/domain/usecase/call_usecase.dart';
 import 'package:revo/features/calls/presentation/cubit/call_cubit.dart';
 import 'package:revo/features/dashboard/presentation/cubit/toggle_cubit/toggle_cubit.dart';
-import 'package:revo/features/dashboard/presentation/screen/toggle_view.dart';
+import 'package:revo/features/dashboard/presentation/widgets/call_job_section/toggle_view.dart';
 import 'package:revo/features/jobs/data/repo/jobs_repo_impl.dart';
 import 'package:revo/features/jobs/domain/usecase/job_usecase.dart';
 import 'package:revo/features/jobs/presentation/cubits/jobs_cubit.dart';
 
-class CallHistoryPage extends StatelessWidget {
-  const CallHistoryPage({super.key});
+class CallJob extends StatelessWidget {
+  const CallJob({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -30,9 +30,9 @@ class CallHistoryPage extends StatelessWidget {
             return JobsCubit(useCase);
           },
         ),
-        BlocProvider(create: (_) => ToggleCubit()),
+        BlocProvider(create: (_) => CallJobToggleCubit()),
       ],
-      child: const CallHistoryView(),
+      child: const CallJobContent(),
     );
   }
 }

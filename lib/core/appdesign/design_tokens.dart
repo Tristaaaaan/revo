@@ -81,4 +81,10 @@ class AppTextStyle {
     fontSize: AppTextSize.xs, // 12
     fontWeight: AppFontWeight.bold, // FontWeight.w700,
   );
+
+  static const boldSm = TextStyle(
+    color: Colors.white,
+    fontSize: AppTextSize.sm, // 14
+    fontWeight: AppFontWeight.bold, // FontWeight.w700,
+  );
 }

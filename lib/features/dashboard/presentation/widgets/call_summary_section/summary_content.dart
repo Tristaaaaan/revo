@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:revo/core/appdesign/design_tokens.dart';
 import 'package:revo/features/dashboard/presentation/cubit/summary_toggle_cubit/summary_toggle_cubit.dart';
-import 'package:revo/features/dashboard/presentation/widgets/call_summary/call_content.dart';
-import 'package:revo/features/dashboard/presentation/widgets/call_summary/call_summary_toggle.dart';
+import 'package:revo/features/dashboard/presentation/widgets/call_summary_section/call_content.dart';
+import 'package:revo/features/dashboard/presentation/widgets/call_summary_section/call_summary_toggle.dart';
 
 class CallSummaryContent extends StatelessWidget {
   const CallSummaryContent({super.key});

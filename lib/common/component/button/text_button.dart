@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:revo/core/appdesign/design_tokens.dart';
 
-class ViewAllButton extends StatelessWidget {
-  const ViewAllButton({super.key});
+class CustomTextButtom extends StatelessWidget {
+  final String text;
+  const CustomTextButtom({super.key, required this.text});
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +15,7 @@ class ViewAllButton extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Text(
-              'View All',
+              text,
               style: AppTextStyle.boldXs.copyWith(
                 color: AppTextStyle.boldXs.color?.withValues(alpha: (0.4)),
               ),

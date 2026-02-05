@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:revo/features/dashboard/presentation/widgets/buttons/view_all/view_all.dart';
+import 'package:revo/common/component/button/text_button.dart';
 
 class TeamplatesHeader extends StatelessWidget {
   const TeamplatesHeader({super.key});
@@ -14,7 +14,7 @@ class TeamplatesHeader extends StatelessWidget {
           style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
         ),
         Spacer(),
-        ViewAllButton(),
+        CustomTextButtom(text: "View All"),
       ],
     );
   }

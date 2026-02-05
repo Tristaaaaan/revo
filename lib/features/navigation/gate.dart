@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:revo/common/components/navbar/custom_navbar.dart';
+import 'package:revo/common/component/navbar/custom_navbar.dart';
 import 'package:revo/features/calls/presentation/screen/call_screen.dart';
 import 'package:revo/features/dashboard/presentation/screen/presentation_screen.dart';
 import 'package:revo/features/navigation/presentation/cubit/navigation_cubit.dart';

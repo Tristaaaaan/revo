@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:revo/features/dashboard/presentation/widgets/info_container.dart';
+import 'package:revo/features/dashboard/presentation/widgets/access_info_section/info_container.dart';
 
 class AccessInfo extends StatelessWidget {
   const AccessInfo({super.key});
