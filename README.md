@@ -160,6 +160,10 @@ If I have more time, I will be adding state plaholders including the empty, erro
 
 One thing that consumed time the most is implementing BLoC/Cubit. This is my first time using it on a project as I mainly used Riverpod but with more time, I can learn the proper usage of each BLoC and how it is structured with project to make things much more organized.
 
+## Demo Link
+
+https://drive.google.com/file/d/1mPPgyg2U0Emwyhn7cMC1erUVmRJrkz3S/view?usp=sharing
+
 ## Contact
 
 For inquiries:

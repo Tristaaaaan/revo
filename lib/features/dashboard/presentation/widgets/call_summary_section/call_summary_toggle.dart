@@ -33,7 +33,7 @@ class CallSummaryToggle extends StatelessWidget {
                 child: ToggleButton(
                   selectedColor: Theme.of(context).colorScheme.primaryContainer,
 
-                  label: 'Total Quality',
+                  label: 'Call Quality',
                   selected: state == SummaryToggleOption.totalQuality,
                   onTap: () => context.read<SummaryToggleCubit>().select(
                     SummaryToggleOption.totalQuality,
