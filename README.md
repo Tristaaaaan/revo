@@ -52,7 +52,23 @@ revo/
 ├─ pubspec.yaml # Project dependencies
 └─ README.md # Project overview and instructions
 
-### Folder Structure
+## Atomic Design Approach (shared/widgets)
+
+- **Atoms:** Buttons, icons, text fields
+- **Molecules:** Input groups, card items (combinations of atoms)
+- **Organisms:** Complex UI sections like chat lists or profile headers
+- **Templates:** Page-level scaffolds/layouts
+
+**Design Tokens:**  
+All colors, typography, and spacing live in `core/theme/` to ensure consistency across the app.
+
+## Firebase Assumptions
+
+- **Auth:** `users` collection
+- **Chat:** `chatRooms/{roomId}/messages` subcollection
+- **Profiles:** `users` collection with profile info
+- **Settings:** `userPreferences` per user
+- **Streams:** Real-time updates for chat and user presence
 
 ## Core Technologies
 
