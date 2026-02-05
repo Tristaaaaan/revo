@@ -83,19 +83,19 @@ All colors, typography, and spacing live in `core/appdesign/` to ensure consiste
 
 - **Auth:** `users` collection
 
-* This collection contains the information submitted by the user, this includes their personal information and business information.
+This collection contains the information submitted by the user, this includes their personal information and business information.
 
 - **Job Sources:** `jobs` collection
 
-* This collection contains the jobs sources.
+This collection contains the jobs sources.
 
 - **Calls:** `calls` collection
 
-* This collection contains the jobs sources.
+This collection contains the jobs sources.
 
 - **Team:** `team` collection
 
-* This collection contains the teams/groups.
+This collection contains the teams/groups.
 
 ## How to Use the Project
 
