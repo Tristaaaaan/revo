@@ -167,7 +167,7 @@ https://drive.google.com/file/d/1mPPgyg2U0Emwyhn7cMC1erUVmRJrkz3S/view?usp=shari
 
 ## Note
 
-The answers for PART 1 can be read  in this READme as well.
+The answers for PART 1 is already included in this READme as well.
 
 ## Contact
 
