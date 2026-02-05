@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:revo/common/component/button/toggle_button.dart';
 import 'package:revo/core/appdesign/design_tokens.dart';
 import 'package:revo/features/dashboard/presentation/cubit/summary_toggle_cubit/summary_toggle_cubit.dart';
+import 'package:revo/shared/enum/shared_enums.dart';
+import 'package:revo/shared/widgets/button/toggle_button.dart';
 
 class CallSummaryToggle extends StatelessWidget {
   const CallSummaryToggle({super.key});

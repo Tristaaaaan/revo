@@ -1,6 +1,5 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-
-enum CallJobToggleOption { recentCalls, jobsScheduled }
+import 'package:revo/shared/enum/shared_enums.dart';
 
 class CallJobToggleCubit extends Cubit<CallJobToggleOption> {
   CallJobToggleCubit() : super(CallJobToggleOption.recentCalls);

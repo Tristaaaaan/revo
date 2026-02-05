@@ -1,4 +1,4 @@
-import 'package:revo/config/app_environments.dart';
+import 'package:revo/shared/enum/shared_enums.dart';
 
 class AppConfig {
   static Flavors flavors = Flavors.production;

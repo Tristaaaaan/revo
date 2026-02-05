@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:revo/config/app_config.dart';
-import 'package:revo/config/app_environments.dart';
+import 'package:revo/core/appconfig/app_config.dart';
+import 'package:revo/shared/enum/shared_enums.dart';
 
 import 'core/approutes/app_routes.dart';
 import 'core/appthemes/app_themes.dart';
@@ -10,7 +10,9 @@ void main() async {
   AppConfig.setEnvironment(Flavors.production);
   WidgetsFlutterBinding.ensureInitialized();
 
-  runApp(const MainApp());
+  runApp(
+    BlocProvider(create: (context) => ThemeCubit(), child: const MainApp()),
+  );
 }
 
 class MainApp extends StatelessWidget {
