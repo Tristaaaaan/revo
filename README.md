@@ -6,43 +6,13 @@ A new Flutter project.
 
 ### Top Level
 
-📦 revo
-├─ 📱 android/ # Native Android code
-├─ 🍎 ios/ # Native iOS code
-├─ 🌐 web/ # Web platform code
-├─ 🖼 assets/ # Static assets
-│ ├─ 🔤 fonts/
-│ ├─ 🖼 images/
-│ └─ 🎨 icons/
-├─ 🧪 test/ # Unit & widget tests
-├─ 💻 lib/ # Main Dart code
-│ ├─ main.dart
-│ ├─ app.dart
-│ ├─ core/
-│ │ ├─ constants/
-│ │ ├─ utils/
-│ │ ├─ routing/
-│ │ ├─ di/
-│ │ ├─ theme/
-│ │ └─ extensions/
-│ ├─ shared/
-│ │ ├─ widgets/
-│ │ ├─ models/
-│ │ └─ enums/
-│ ├─ features/
-│ │ ├─ auth/
-│ │ │ ├─ data/
-│ │ │ ├─ domain/
-│ │ │ └─ presentation/
-│ │ ├─ chat/
-│ │ │ ├─ data/
-│ │ │ ├─ domain/
-│ │ │ └─ presentation/
-│ │ └─ other_features/
-│ ├─ l10n/
-│ └─ generated/
-├─ 📦 pubspec.yaml
-└─ 📄 README.md
+    ├── build                   # Compiled files (alternatively `dist`)
+    ├── docs                    # Documentation files (alternatively `doc`)
+    ├── src                     # Source files (alternatively `lib` or `app`)
+    ├── test                    # Automated tests (alternatively `spec` or `tests`)
+    ├── tools                   # Tools and utilities
+    ├── LICENSE
+    └── README.md
 
 ## Atomic Design Approach (shared/widgets)
 
