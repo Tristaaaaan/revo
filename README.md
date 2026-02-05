@@ -143,9 +143,9 @@ flutter pub get
 
 ### Structure
 
-I implement flavors to assure that the project will be linked to the right Firebase project once it is already implemented and handle each versions of the application properly. This assure that the production project will not be touched during the development of the application. I followed a Feature-First approach when it comes to Clean Architecture implementation. This is done to clearly separate the files within the app.
+I implemented flavors to ensure the project is linked to the correct Firebase environment and to properly manage different versions of the application. This guarantees that the production project is not affected during development. I followed a Feature-First approach for the Clean Architecture implementation to clearly separate files and responsibilities within the app.
 
-I used Freezed to generate the data models in order to safely utilize it when consuming data from either local or remote source
+I used Freezed to generate data models, allowing for safer and more consistent data handling when consuming information from either local or remote sources.
 
 ### AI Tools Used
 
