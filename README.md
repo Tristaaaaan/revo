@@ -89,7 +89,7 @@ All colors, typography, and spacing live in `core/theme/` to ensure consistency 
 
 -
 
-## Core Technologies
+## Development Details
 
 ### App Development
 
@@ -97,3 +97,23 @@ All colors, typography, and spacing live in `core/theme/` to ensure consistency 
 - **Dart** (`v3.9.2`)
 - **BLoC/Cubit**
 - **GoRouter**
+
+### Structure
+
+I implement flavors to assure that the project will be linked to the right Firebase project once it is already implemented and handle each versions of the application properly. This assure that the production project will not be touched during the development of the application. I followed a Feature-First approach when it comes to Clean Architecture implementation. This is clearly separate the features files within the app.
+
+I used Freezed to generate the data models in order to safely utilize it when consuming data from either local or remote source
+
+### AI Tools Used
+
+- **Claude**
+- **WindSurt**
+- **ChatGPT**
+
+### Things To Improve
+
+Roughly, I have spent around 18 hours. This may sound lengthy but I tried to make 1:1 copy from the Figma design to the project. Generating code from AI still needs some refactoring to assure that it is working.
+
+If I have more time, I will be adding state plaholders including the empty, error, loading, and initial. Additionally, the coding part needs heavy refactoring as I have focused on making the widgets needed for each section. Some of the widgets are still not reusable as of the moment. Furthermore, I was not able to make the widgets responsive yet. :<
+
+One thing that consumed time the most is implementing BLoC/Cubit. This is my first time using it on a project as I mainly used Riverpod but with more time, I can learn the proper usage of each BLoC and how it is structured with project to make things much more organized.
