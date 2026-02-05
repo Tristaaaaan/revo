@@ -3,7 +3,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:revo/features/dashboard/presentation/widgets/buttons/regular_button/regular_button_cubit.dart';
 
 class RegularButton extends StatelessWidget {
-  final bool? withIcon;
   final String text;
   final Color backgroundColor;
   final Color textColor;
@@ -11,13 +10,10 @@ class RegularButton extends StatelessWidget {
   final bool? withoutLoading;
   final void Function()? onTap;
   final bool? suffixIcon;
-  final bool? withBorder;
   final double width;
 
   const RegularButton({
     super.key,
-    this.withBorder = false,
-    this.withIcon = true,
     required this.text,
     required this.backgroundColor,
     required this.textColor,
@@ -43,49 +39,46 @@ class RegularButton extends StatelessWidget {
                   onTap?.call();
                 },
           child: Container(
+            height: 30,
             width: width,
-
+            padding: const EdgeInsets.symmetric(vertical: 4),
             decoration: BoxDecoration(
               color: backgroundColor,
-              borderRadius: BorderRadius.circular(50),
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.grey.withValues(alpha: .5),
-                  spreadRadius: 2,
-                  blurRadius: 7,
-                  offset: const Offset(0, 3),
-                ),
-              ],
-              border: withBorder!
-                  ? Border.all(
-                      color: Theme.of(context).colorScheme.primary,
-                      width: 3,
-                    )
-                  : null,
+              borderRadius: BorderRadius.circular(20),
             ),
             child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Expanded(
                   child: isLoading
-                      ? Center(child: CircularProgressIndicator())
+                      ? Center(
+                          child: SizedBox(
+                            width: 12,
+                            height: 12,
+                            child: CircularProgressIndicator(
+                              strokeWidth: 2,
+                              color: Colors.white,
+                            ),
+                          ),
+                        )
                       : Row(
                           mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             if (suffixIcon!) ...[
-                              const SizedBox(width: 10),
-                              Icon(
-                                Icons.chevron_right,
-                                color: Theme.of(context).colorScheme.surface,
-                              ),
+                              Icon(Icons.add, size: 12, color: Colors.white),
+                              const SizedBox(width: 5),
                             ],
+
                             Text(
                               text,
                               style: TextStyle(fontSize: 12, color: textColor),
                             ),
+                            const SizedBox(width: 5),
                           ],
                         ),
                 ),
-                if (withIcon == true) const SizedBox(width: 20),
               ],
             ),
           ),

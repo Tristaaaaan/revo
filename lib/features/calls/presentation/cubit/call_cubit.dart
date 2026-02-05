@@ -14,6 +14,9 @@ class CallCubit extends Cubit<CallState> {
     emit(const CallState.loading());
     try {
       final List<CallModel>? calls = await getRecentCallsUseCase.execute();
+
+      if (isClosed) return;
+
       if (calls!.isEmpty) {
         emit(const CallState.empty());
       } else {

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:revo/core/appdesign/design_tokens.dart';
 import 'package:revo/features/dashboard/presentation/widgets/buttons/regular_button/regular_button.dart';
 import 'package:revo/features/dashboard/presentation/widgets/buttons/regular_button/regular_button_cubit.dart';
 
@@ -33,8 +34,8 @@ class ButtonCard extends StatelessWidget {
 
           return Expanded(
             child: Container(
-              margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
               padding: const EdgeInsets.all(16),
+              margin: const EdgeInsets.all(10),
               decoration: BoxDecoration(
                 color: Theme.of(context).colorScheme.primaryContainer,
                 borderRadius: BorderRadius.circular(16),
@@ -45,15 +46,12 @@ class ButtonCard extends StatelessWidget {
                     children: [
                       Text(title),
                       const Spacer(),
-                      IconButton(
-                        onPressed: () {},
-                        icon: const Icon(Icons.more_horiz),
-                      ),
+                      InkWell(onTap: () {}, child: Icon(Icons.more_horiz)),
                     ],
                   ),
-
+                  const SizedBox(height: AppSpacing.md),
                   content ?? Container(),
-                  const SizedBox(height: 12),
+                  const SizedBox(height: AppSpacing.md),
                   RegularButton(
                     onTap: isLoading
                         ? null

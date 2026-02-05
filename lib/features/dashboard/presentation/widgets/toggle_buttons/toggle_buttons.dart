@@ -1,5 +1,8 @@
+import 'dart:developer' as developer;
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:revo/core/appdesign/design_tokens.dart';
 import 'package:revo/features/dashboard/presentation/cubit/toggle_cubit/toggle_cubit.dart';
 
 class CallsJobsToggle extends StatelessWidget {
@@ -11,7 +14,8 @@ class CallsJobsToggle extends StatelessWidget {
       builder: (context, state) {
         return SliverToBoxAdapter(
           child: ToggleButtons(
-            borderRadius: BorderRadius.circular(12),
+            borderRadius: BorderRadius.circular(AppRadius.md),
+
             isSelected: [
               state == ToggleOption.recentCalls,
               state == ToggleOption.jobsScheduled,
@@ -23,6 +27,7 @@ class CallsJobsToggle extends StatelessWidget {
                     ? ToggleOption.recentCalls
                     : ToggleOption.jobsScheduled,
               );
+              developer.log("index: ${cubit.state}");
             },
             children: const [
               Padding(

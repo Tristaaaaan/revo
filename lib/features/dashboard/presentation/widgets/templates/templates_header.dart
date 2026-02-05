@@ -6,6 +6,16 @@ class TeamplatesHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Row(children: [Text('Templates'), Spacer(), ViewAllButton()]);
+    return const Row(
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+        Text(
+          'Templates',
+          style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+        ),
+        Spacer(),
+        ViewAllButton(),
+      ],
+    );
   }
 }

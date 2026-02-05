@@ -38,7 +38,7 @@ class AppRadius {
 /// -----------------------------
 /// TEXT SIZES
 /// -----------------------------
-class AppTextSizes {
+class AppTextSize {
   static const xs = 12.0;
   static const sm = 14.0;
   static const md = 16.0;
@@ -50,7 +50,7 @@ class AppTextSizes {
 /// -----------------------------
 /// FONT WEIGHTS
 /// -----------------------------
-class AppFontWeights {
+class AppFontWeight {
   static const light = FontWeight.w300;
   static const regular = FontWeight.w400;
   static const medium = FontWeight.w500;
@@ -62,40 +62,23 @@ class AppFontWeights {
 /// -----------------------------
 /// TEXT STYLES
 /// -----------------------------
-class AppTextStyles {
-  static const heading1 = TextStyle(
-    fontSize: AppTextSizes.xxl,
-    fontWeight: AppFontWeights.bold,
-    color: AppColors.black,
+class AppTextStyle {
+  // Xs text, white color
+  static const regularXs = TextStyle(
+    color: Colors.white,
+    fontSize: AppTextSize.xs, // 12
+    fontWeight: AppFontWeight.regular, // FontWeight.w400,
   );
 
-  static const heading2 = TextStyle(
-    fontSize: AppTextSizes.xl,
-    fontWeight: AppFontWeights.semiBold,
-    color: AppColors.black,
+  static const regularSm = TextStyle(
+    color: Colors.white,
+    fontSize: AppTextSize.sm, // 14
+    fontWeight: AppFontWeight.regular, // FontWeight.w400,
   );
 
-  static const heading3 = TextStyle(
-    fontSize: AppTextSizes.lg,
-    fontWeight: AppFontWeights.medium,
-    color: AppColors.black,
-  );
-
-  static const body = TextStyle(
-    fontSize: AppTextSizes.md,
-    fontWeight: AppFontWeights.regular,
-    color: AppColors.black,
-  );
-
-  static const bodySmall = TextStyle(
-    fontSize: AppTextSizes.sm,
-    fontWeight: AppFontWeights.regular,
-    color: AppColors.gray,
-  );
-
-  static const button = TextStyle(
-    fontSize: AppTextSizes.md,
-    fontWeight: AppFontWeights.semiBold,
-    color: AppColors.white,
+  static const boldXs = TextStyle(
+    color: Colors.white,
+    fontSize: AppTextSize.xs, // 12
+    fontWeight: AppFontWeight.bold, // FontWeight.w700,
   );
 }

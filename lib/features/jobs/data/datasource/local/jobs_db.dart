@@ -1,88 +1,65 @@
-// class MockJobsData {
-//   static final _random = Random();
+import 'dart:math';
 
-//   static final _names = [
-//     'Alice Johnson',
-//     'Bob Smith',
-//     'Charlie Davis',
-//     'Diana Moore',
-//     'Ethan Brown',
-//     'Fiona White',
-//     'George Clark',
-//     'Hannah Lewis',
-//     'Ian Walker',
-//     'Julia Hall',
-//   ];
-//   static final _businessAddress = [
-//     'Service inquiries',
-//     'Follow up',
-//     'Spam calls',
-//     'Emergency lockouts',
-//     'After-hours calls',
-//   ];
-//   static final _avatars = [
-//     'https://i.pravatar.cc/150?img=1',
-//     'https://i.pravatar.cc/150?img=2',
-//     'https://i.pravatar.cc/150?img=3',
-//     'https://i.pravatar.cc/150?img=4',
-//     'https://i.pravatar.cc/150?img=5',
-//     'https://i.pravatar.cc/150?img=6',
-//     'https://i.pravatar.cc/150?img=7',
-//     'https://i.pravatar.cc/150?img=8',
-//     'https://i.pravatar.cc/150?img=9',
-//     'https://i.pravatar.cc/150?img=10',
-//   ];
+import 'package:revo/features/jobs/data/model/jobs_model.dart';
 
-//   static String _generatePhoneNumber() {
-//     final area = 555; // fixed for realism
-//     final prefix = 100 + _random.nextInt(900); // 100–999
-//     final line = 1000 + _random.nextInt(9000); // 1000–9999
+class MockJobsData {
+  static final _random = Random();
 
-//     return '+1 ($area) $prefix-$line';
-//   }
+  static final _names = [
+    'Alice Johnson',
+    'Bob Smith',
+    'Charlie Davis',
+    'Diana Moore',
+    'Ethan Brown',
+    'Fiona White',
+    'George Clark',
+    'Hannah Lewis',
+    'Ian Walker',
+    'Julia Hall',
+  ];
 
-//   static final _callTypes = CallType.values;
+  static final _addresses = [
+    '123 Main Street, Manila',
+    '45 Rizal Ave, Quezon City',
+    '78 Ayala Blvd, Makati',
+    '12 Bonifacio St, Taguig',
+    '9 Ortigas Center, Pasig',
+    '56 Commonwealth Ave, QC',
+    '33 España Blvd, Manila',
+    '90 Shaw Blvd, Mandaluyong',
+    '21 Pioneer St, Pasig',
+    '67 BGC, Taguig',
+  ];
 
-//   /// Generate a single random call
-//   static CallModel generateCall(int index) {
-//     final name = _names[_random.nextInt(_names.length)];
-//     final avatar = _avatars[_random.nextInt(_avatars.length)];
-//     final type = _callTypes[_random.nextInt(_callTypes.length)];
-//     final number = _generatePhoneNumber();
+  static final _documentUrls = [
+    'https://example.com/doc1.pdf',
+    'https://example.com/doc2.pdf',
+    'https://example.com/doc3.pdf',
+  ];
 
-//     final description = _descriptions[_random.nextInt(_descriptions.length)];
-//     // Generate a call time within the last 30 days
-//     final now = DateTime.now();
-//     final callTime = now
-//         .subtract(
-//           Duration(
-//             days: _random.nextInt(30),
-//             hours: _random.nextInt(24),
-//             minutes: _random.nextInt(60),
-//           ),
-//         )
-//         .millisecondsSinceEpoch;
+  static final _statuses = ['pending', 'in_progress', 'completed', 'cancelled'];
 
-//     // Duration between 30 sec and 1 hour
-//     final duration = type != CallType.missed
-//         ? _random.nextInt(3600 - 30) + 30
-//         : 0;
+  /// Generate a single mock job
+  static JobModel generateJob(int index) {
+    final name = _names[_random.nextInt(_names.length)];
+    final address = _addresses[_random.nextInt(_addresses.length)];
 
-//     return JobModel(
-//       id: 'call_$index',
-//       callerName: name,
-//       callerNumber: number,
-//       callerAvatarUrl: avatar,
-//       callType: type,
-//       callTime: callTime,
-//       description: description,
-//       callTimeOut: callTime + duration * 1000,
-//       callDuration: duration,
-//     );
-//   }
+    return JobModel(
+      id: 'job_$index',
+      name: name,
+      address: address,
+      dateTime: DateTime.now()
+          .subtract(Duration(days: _random.nextInt(14)))
+          .millisecondsSinceEpoch,
+      status: _statuses[_random.nextInt(_statuses.length)],
+      documentUrl: _random.nextBool()
+          ? _documentUrls[_random.nextInt(_documentUrls.length)]
+          : null,
+    );
+  }
 
-//   /// Generate a list of mock calls
-//   static List<CallModel> generateCalls({int count = 50}) {
-//     return List.generate(count, (index) => generateCall(index));
-//   }
-// }
+  /// Generate a list of mock jobs
+  static List<JobModel> generateJobs({int count = 50}) {
+    return List.generate(count, (index) => generateJob(index));
+  }
+}
