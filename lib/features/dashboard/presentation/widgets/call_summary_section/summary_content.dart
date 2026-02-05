@@ -282,11 +282,7 @@ class CallSummaryContent extends StatelessWidget {
                     children: [
                       Text(
                         "What kind of calls are coming in",
-                        style: AppTextStyle.regularXs.copyWith(
-                          color: AppTextStyle.regularXs.color?.withValues(
-                            alpha: 0.4,
-                          ),
-                        ),
+                        style: AppTextStyle.regularLg,
                       ),
                       SizedBox(height: 16),
                       Row(
