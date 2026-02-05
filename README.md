@@ -49,6 +49,7 @@ The user can also search, create, and modify their job sources.
     │   ├── shared/               # Shared resources across features
     │   │   ├── widgets/          # Common Widgets
     │   │   ├── models/           # Shared models
+    │   │   ├── utils/            # Shared utils
     │   │   └── enums/            # Shared enums
     │   │
     │   ├── features/             # Feature-first structure (Clean Architecture)
@@ -71,7 +72,6 @@ The user can also search, create, and modify their job sources.
     │   │   └── other_features/   # Add features here following same pattern
     │
     ├── test/                     # Automated tests (unit, widget)
-    ├── tools/                    # Tools and utilities
     ├── pubspec.yaml              # Project dependencies
     ├── LICENSE                   # License file
     └── README.md                 # Project overview and instructions
