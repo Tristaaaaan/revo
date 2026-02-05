@@ -6,51 +6,43 @@ A new Flutter project.
 
 ### Top Level
 
-revo/
-│
-├─ android/ # Native Android code
-├─ ios/ # Native iOS code
-├─ web/ # Web platform code
-├─ assets/ # Static assets
-│ ├─ fonts/ # Custom fonts
-│ ├─ images/ # App images
-│ └─ icons/ # Icons used across app
-├─ test/ # Unit & widget tests
-├─ lib/ # Main Dart code
-│ ├─ main.dart # Entry point
-│ ├─ app.dart # Root widget, theme, navigation
-│ │
-│ ├─ core/ # Global utilities, configs, theme, DI
-│ │ ├─ constants/ # App-wide constants
-│ │ ├─ utils/ # Helper functions (validators, date formatters)
-│ │ ├─ routing/ # App routing & navigation
-│ │ ├─ di/ # Dependency injection / service locator
-│ │ ├─ theme/ # Colors, typography, spacing, theme data
-│ │ └─ extensions/ # Dart extensions (String, DateTime, etc.)
-│ │
-│ ├─ shared/ # Shared resources across features
-│ │ ├─ widgets/ # Atomic design: atoms, molecules, organisms, templates
-│ │ ├─ models/ # Shared models
-│ │ └─ enums/ # Shared enums
-│ │
-│ ├─ features/ # Feature-first structure (Clean Architecture)
+📦 revo
+├─ 📱 android/ # Native Android code
+├─ 🍎 ios/ # Native iOS code
+├─ 🌐 web/ # Web platform code
+├─ 🖼 assets/ # Static assets
+│ ├─ 🔤 fonts/
+│ ├─ 🖼 images/
+│ └─ 🎨 icons/
+├─ 🧪 test/ # Unit & widget tests
+├─ 💻 lib/ # Main Dart code
+│ ├─ main.dart
+│ ├─ app.dart
+│ ├─ core/
+│ │ ├─ constants/
+│ │ ├─ utils/
+│ │ ├─ routing/
+│ │ ├─ di/
+│ │ ├─ theme/
+│ │ └─ extensions/
+│ ├─ shared/
+│ │ ├─ widgets/
+│ │ ├─ models/
+│ │ └─ enums/
+│ ├─ features/
 │ │ ├─ auth/
-│ │ │ ├─ data/ # Data sources, repositories, models
-│ │ │ ├─ domain/ # Entities, repositories, use cases
-│ │ │ └─ presentation/# Pages, Cubits/BLoCs, widgets
-│ │ │
+│ │ │ ├─ data/
+│ │ │ ├─ domain/
+│ │ │ └─ presentation/
 │ │ ├─ chat/
 │ │ │ ├─ data/
 │ │ │ ├─ domain/
 │ │ │ └─ presentation/
-│ │ │
-│ │ └─ other_features/ # Add features here following same pattern
-│ │
-│ ├─ l10n/ # Localization files (.arb)
-│ └─ generated/ # Generated code (JSON serialization, localization, etc.)
-│
-├─ pubspec.yaml # Project dependencies
-└─ README.md # Project overview and instructions
+│ │ └─ other_features/
+│ ├─ l10n/
+│ └─ generated/
+├─ 📦 pubspec.yaml
+└─ 📄 README.md
 
 ## Atomic Design Approach (shared/widgets)
 
