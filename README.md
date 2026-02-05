@@ -98,7 +98,7 @@ This collection contains the jobs sources.
 
 - **Calls:** `calls` collection
 
-This collection contains the jobs sources.
+This collection contains the calls.
 
 - **Team:** `team` collection
 
