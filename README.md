@@ -2,7 +2,24 @@
 
 A new Flutter project.
 
-## Core Technologies
+## Folder
+
+### Top Level
+
+    revo/
+    │
+    ├─ android/
+    ├─ ios/
+    ├─ web/
+    ├─ assets/
+    │   ├─ fonts/
+    │   ├─ images/
+    │   └─ icons/
+    ├─ test/
+    ├─ lib/
+    │
+    ├─ pubspec.yaml
+    └─ README.md
 
 ### Top Level
 
