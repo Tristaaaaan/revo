@@ -1,12 +1,12 @@
 # revo
 
-This application enables user to manage business calls with ease.
+This application enables users to manage business calls with ease.
 
-The app begins with an onboarding page where the user has to create an account to proceed. In here, the user will be asked about their business and some key information about it including the location, the industry they are into, the business number, and they preferred way to be notified.
+The app begins with an onboarding flow where users create an account to proceed. During setup, they are asked to provide key business information, including location, industry, business phone number, and preferred notification method.
 
-Once the setup is completed, they will be able to proceed on the dashboard screen where the could see their call history, summary, as well as the jobs scheduled. Once an account is ready, they could setup their account further by having a much detailed settings.
+Once setup is complete, users are taken to the dashboard, where they can view call history, summaries, and scheduled jobs. After creating an account, users can further customize their experience through detailed account settings.
 
-The user can also search, create, and modify their job sources.
+Users can also search for, create, and modify their job sources.
 
 <img width="1920" height="1080" alt="REVO" src="https://github.com/user-attachments/assets/7764db48-e99c-48a1-96ed-029ac3dc630a" />
 
