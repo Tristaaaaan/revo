@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:revo/config/app_config.dart';
+import 'package:revo/core/appconfig/app_config.dart';
 import 'package:revo/core/approutes/app_routes.dart';
 import 'package:revo/core/appthemes/app_themes.dart';
 import 'package:revo/shared/enum/shared_enums.dart';

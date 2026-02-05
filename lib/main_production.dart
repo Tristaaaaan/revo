@@ -10,7 +10,9 @@ void main() async {
   AppConfig.setEnvironment(Flavors.production);
   WidgetsFlutterBinding.ensureInitialized();
 
-  runApp(const MainApp());
+  runApp(
+    BlocProvider(create: (context) => ThemeCubit(), child: const MainApp()),
+  );
 }
 
 class MainApp extends StatelessWidget {
