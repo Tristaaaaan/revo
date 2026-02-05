@@ -104,6 +104,11 @@ class AppTextStyle {
     fontWeight: AppFontWeight.regular, // FontWeight.w400,
   );
 
+  static const regularLg = TextStyle(
+    color: Colors.white,
+    fontSize: AppTextSize.sm, // 20
+    fontWeight: AppFontWeight.regular, // FontWeight.w400,
+  );
   static const boldXs = TextStyle(
     color: Colors.white,
     fontSize: AppTextSize.xs, // 12

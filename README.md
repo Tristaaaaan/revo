@@ -34,7 +34,6 @@ The user can also search, create, and modify their job sources.
     │   ├── main_staging.dart     # Development entry point
     │   ├── main_development.dart # Staging entry point
     │   │
-    │   ├── config/               # Handle app environment
     │   ├── firebase/             # Firebase Option for each environment
     │   │   ├── dev/
     │   │   ├── prod/
