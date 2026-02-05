@@ -82,12 +82,20 @@ All colors, typography, and spacing live in `core/appdesign/` to ensure consiste
 ## Firebase Assumptions
 
 - **Auth:** `users` collection
-  This collection contains the information submitted by the user, this includes their personal information and business information.
+
+* This collection contains the information submitted by the user, this includes their personal information and business information.
 
 - **Job Sources:** `jobs` collection
-  This collection contains the jobs sources.
 
--
+* This collection contains the jobs sources.
+
+- **Calls:** `calls` collection
+
+* This collection contains the jobs sources.
+
+- **Team:** `team` collection
+
+* This collection contains the teams/groups.
 
 ## How to Use the Project
 
@@ -120,7 +128,7 @@ flutter pub get
 
 ### Structure
 
-I implement flavors to assure that the project will be linked to the right Firebase project once it is already implemented and handle each versions of the application properly. This assure that the production project will not be touched during the development of the application. I followed a Feature-First approach when it comes to Clean Architecture implementation. This is clearly separate the features files within the app.
+I implement flavors to assure that the project will be linked to the right Firebase project once it is already implemented and handle each versions of the application properly. This assure that the production project will not be touched during the development of the application. I followed a Feature-First approach when it comes to Clean Architecture implementation. This is done to clearly separate the files within the app.
 
 I used Freezed to generate the data models in order to safely utilize it when consuming data from either local or remote source
 
