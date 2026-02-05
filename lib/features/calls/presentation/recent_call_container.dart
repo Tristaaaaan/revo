@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:intl/intl.dart';
+import 'package:revo/core/appimages/app_images.dart';
 import 'package:revo/features/calls/data/model/call_model.dart';
 import 'package:revo/features/calls/presentation/cubit/call_cubit.dart';
 import 'package:revo/features/calls/presentation/cubit/call_states.dart';
@@ -50,17 +51,17 @@ class RecentCallContainer extends StatelessWidget {
 
                 switch (call.callType) {
                   case CallType.incoming:
-                    imagePath = 'assets/icons/calls/incoming.png';
+                    imagePath = AppImages.incoming;
                     bgColor = const Color(0x1A10B981);
                     break;
 
                   case CallType.outgoing:
-                    imagePath = 'assets/icons/calls/outgoing.png';
+                    imagePath = AppImages.outgoing;
                     bgColor = const Color(0x1A3B82F6);
                     break;
 
                   case CallType.missed:
-                    imagePath = 'assets/icons/calls/missed.png';
+                    imagePath = AppImages.missed;
                     bgColor = const Color(0x1A94A3B8);
                     break;
                 }

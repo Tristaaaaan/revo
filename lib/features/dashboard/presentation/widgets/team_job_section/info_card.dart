@@ -34,11 +34,14 @@ class ButtonCard extends StatelessWidget {
 
           return Expanded(
             child: Container(
-              padding: const EdgeInsets.all(16),
-              margin: const EdgeInsets.all(10),
+              padding: const EdgeInsets.all(AppSpacing.md),
+              margin: const EdgeInsets.symmetric(
+                horizontal: AppSpacing.xs1,
+                vertical: AppSpacing.md,
+              ),
               decoration: BoxDecoration(
                 color: Theme.of(context).colorScheme.primaryContainer,
-                borderRadius: BorderRadius.circular(16),
+                borderRadius: BorderRadius.circular(AppRadius.md),
               ),
               child: Column(
                 children: [
@@ -46,7 +49,13 @@ class ButtonCard extends StatelessWidget {
                     children: [
                       Text(title),
                       const Spacer(),
-                      InkWell(onTap: () {}, child: Icon(Icons.more_horiz)),
+                      InkWell(
+                        onTap: () {},
+                        child: Icon(
+                          Icons.more_horiz,
+                          color: Colors.white.withValues(alpha: 0.4),
+                        ),
+                      ),
                     ],
                   ),
                   const SizedBox(height: AppSpacing.md),

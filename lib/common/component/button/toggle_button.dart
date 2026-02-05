@@ -20,7 +20,7 @@ class ToggleButton extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        padding: const EdgeInsets.symmetric(vertical: 7, horizontal: 15),
+        padding: const EdgeInsets.symmetric(vertical: 7),
         margin: const EdgeInsets.all(5),
         decoration: BoxDecoration(
           color: selected

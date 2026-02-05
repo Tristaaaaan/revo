@@ -17,32 +17,37 @@ class CallSummaryToggle extends StatelessWidget {
             borderRadius: BorderRadius.circular(AppRadius.md),
           ),
           child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              ToggleButton(
-                selectedColor: Theme.of(context).colorScheme.primaryContainer,
-                label: 'Total Call',
-                selected: state == SummaryToggleOption.totalCalls,
-                onTap: () => context.read<SummaryToggleCubit>().select(
-                  SummaryToggleOption.totalCalls,
+              Expanded(
+                child: ToggleButton(
+                  selectedColor: Theme.of(context).colorScheme.primaryContainer,
+                  label: 'Total Call',
+                  selected: state == SummaryToggleOption.totalCalls,
+                  onTap: () => context.read<SummaryToggleCubit>().select(
+                    SummaryToggleOption.totalCalls,
+                  ),
                 ),
               ),
-              ToggleButton(
-                selectedColor: Theme.of(context).colorScheme.primaryContainer,
+              Expanded(
+                child: ToggleButton(
+                  selectedColor: Theme.of(context).colorScheme.primaryContainer,
 
-                label: 'Total Quality',
-                selected: state == SummaryToggleOption.totalQuality,
-                onTap: () => context.read<SummaryToggleCubit>().select(
-                  SummaryToggleOption.totalQuality,
+                  label: 'Total Quality',
+                  selected: state == SummaryToggleOption.totalQuality,
+                  onTap: () => context.read<SummaryToggleCubit>().select(
+                    SummaryToggleOption.totalQuality,
+                  ),
                 ),
               ),
-              ToggleButton(
-                selectedColor: Theme.of(context).colorScheme.primaryContainer,
+              Expanded(
+                child: ToggleButton(
+                  selectedColor: Theme.of(context).colorScheme.primaryContainer,
 
-                label: 'Call Behavior',
-                selected: state == SummaryToggleOption.callBehavior,
-                onTap: () => context.read<SummaryToggleCubit>().select(
-                  SummaryToggleOption.callBehavior,
+                  label: 'Call Behavior',
+                  selected: state == SummaryToggleOption.callBehavior,
+                  onTap: () => context.read<SummaryToggleCubit>().select(
+                    SummaryToggleOption.callBehavior,
+                  ),
                 ),
               ),
             ],

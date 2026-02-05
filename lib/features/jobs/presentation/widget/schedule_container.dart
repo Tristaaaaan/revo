@@ -1,10 +1,12 @@
-import 'dart:developer' as developer;
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:intl/intl.dart';
+import 'package:revo/core/appdesign/design_tokens.dart';
+import 'package:revo/core/appimages/app_images.dart';
 import 'package:revo/features/jobs/presentation/component/icon_text.dart';
 import 'package:revo/features/jobs/presentation/cubits/jobs_cubit.dart';
 import 'package:revo/features/jobs/presentation/cubits/jobs_state.dart';
+import 'package:revo/features/jobs/presentation/widget/document_chip.dart';
 
 class JobsScheduledContainer extends StatelessWidget {
   const JobsScheduledContainer({super.key});
@@ -24,11 +26,13 @@ class JobsScheduledContainer extends StatelessWidget {
             return SliverList(
               delegate: SliverChildBuilderDelegate((context, index) {
                 final job = items[index];
+                final time = DateTime.fromMillisecondsSinceEpoch(
+                  job.dateTime ?? 0,
+                );
 
-                developer.log('Jobs: ${jobs!.length}');
-
+                String jobTime = DateFormat('h:mm a').format(time);
                 return Container(
-                  margin: const EdgeInsets.only(bottom: 5),
+                  margin: const EdgeInsets.only(bottom: 15),
                   padding: const EdgeInsets.all(16),
                   decoration: BoxDecoration(
                     color: Theme.of(context).colorScheme.primaryContainer,
@@ -40,37 +44,30 @@ class JobsScheduledContainer extends StatelessWidget {
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text(
-                            job.name,
-                            style: const TextStyle(
-                              fontSize: 16,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
+                          Text(job.name, style: AppTextStyle.boldMd2),
                           SizedBox(height: 5),
 
-                          Text(
-                            job.documentUrl ?? '',
-                            style: const TextStyle(fontSize: 12),
-                          ),
-                          SizedBox(height: 8),
-
+                          DocumentChip(text: job.documentUrl ?? ''),
+                          SizedBox(height: AppSpacing.md),
                           ImageText(
-                            imagePath: 'assets/icons/calls/location.png',
+                            imagePath: AppImages.location,
                             text: job.address,
                           ),
                           SizedBox(height: 5),
-
                           ImageText(
-                            imagePath: 'assets/icons/calls/schedule.png',
-                            text: job.dateTime.toString(),
+                            imagePath: AppImages.schedule,
+                            text: job.status ?? '',
                           ),
                         ],
                       ),
                       Spacer(),
                       Text(
-                        job.dateTime.toString(),
-                        style: const TextStyle(fontSize: 16),
+                        jobTime,
+                        style: AppTextStyle.regularXs.copyWith(
+                          color: AppTextStyle.regularXs.color?.withValues(
+                            alpha: 0.4,
+                          ),
+                        ),
                       ),
                     ],
                   ),

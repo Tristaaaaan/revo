@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:revo/core/appdesign/design_tokens.dart';
 
 class InfoContainer extends StatelessWidget {
   final String label;
@@ -6,20 +7,21 @@ class InfoContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
-      decoration: BoxDecoration(
-        color: Theme.of(context).colorScheme.primaryContainer,
-        borderRadius: BorderRadius.circular(14),
-      ),
+    return Expanded(
+      child: Container(
+        margin: const EdgeInsets.all(5),
+        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+        decoration: BoxDecoration(
+          color: Theme.of(context).colorScheme.primaryContainer,
+          borderRadius: BorderRadius.circular(14),
+        ),
 
-      child: Text(
-        textAlign: TextAlign.center,
-        label,
-        style: TextStyle(
-          color: Colors.white,
-          fontSize: 12,
-          fontWeight: FontWeight.w400,
+        child: Text(
+          textAlign: TextAlign.center,
+          label,
+          style: AppTextStyle.regularXs.copyWith(
+            color: AppTextStyle.regularXs.color?.withValues(alpha: 0.5),
+          ),
         ),
       ),
     );

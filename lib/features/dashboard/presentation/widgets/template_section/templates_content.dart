@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:revo/core/appdesign/design_tokens.dart';
+import 'package:revo/core/appimages/app_images.dart';
 
 class TemplatesBody extends StatelessWidget {
   const TemplatesBody({super.key});
@@ -62,7 +63,7 @@ class TemplatesBody extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Image.asset(
-                        "assets/icons/calls/wave.png",
+                        AppImages.wave,
                         width: 40,
                         height: 40,
                         fit: BoxFit.contain,

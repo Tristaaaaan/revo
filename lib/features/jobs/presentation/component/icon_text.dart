@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:revo/core/appdesign/design_tokens.dart';
 
 class ImageText extends StatelessWidget {
   final String imagePath;
@@ -13,10 +14,8 @@ class ImageText extends StatelessWidget {
         SizedBox(width: 8),
         Text(
           text,
-          style: TextStyle(
-            color: Colors.green,
-            fontWeight: FontWeight.w400,
-            fontSize: 12,
+          style: AppTextStyle.regularXs.copyWith(
+            color: AppTextStyle.regularXs.color?.withValues(alpha: (0.4)),
           ),
         ),
       ],

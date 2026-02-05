@@ -27,12 +27,12 @@ class CustomBottomNavBar extends StatelessWidget {
                   context: context,
                 ),
                 _buildNavItem(
-                  icon: Icons.phone_android,
+                  icon: Icons.phone_outlined,
                   index: 1,
                   context: context,
                 ),
                 _buildNavItem(
-                  icon: Icons.settings_outlined,
+                  icon: Icons.grid_view_outlined,
                   index: 2,
                   context: context,
                 ),
@@ -55,9 +55,7 @@ class CustomBottomNavBar extends StatelessWidget {
       onTap: () => onTap(index),
       child: Icon(
         icon,
-        color: isSelected
-            ? Theme.of(context).colorScheme.primary
-            : Theme.of(context).colorScheme.secondaryContainer,
+        color: isSelected ? Colors.white : Colors.white.withValues(alpha: 0.3),
       ),
     );
   }

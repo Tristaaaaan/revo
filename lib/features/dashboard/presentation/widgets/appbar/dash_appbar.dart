@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:revo/core/appdesign/design_tokens.dart';
+import 'package:revo/core/appimages/app_images.dart';
+import 'package:revo/core/apptext/app_text.dart';
 
 class DashboardAppbar extends StatelessWidget {
   const DashboardAppbar({super.key});
@@ -7,11 +9,10 @@ class DashboardAppbar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SliverAppBar(
-      expandedHeight: 125,
       actions: [
         Container(
           decoration: BoxDecoration(
-            color: Theme.of(context).colorScheme.primaryContainer,
+            color: Color(0xff0A0A0A),
             shape: BoxShape.circle,
           ),
           child: IconButton(
@@ -21,27 +22,43 @@ class DashboardAppbar extends StatelessWidget {
           ),
         ),
         SizedBox(width: AppSpacing.xs),
-        Container(
-          decoration: BoxDecoration(
-            color: Theme.of(
-              context,
-            ).colorScheme.primaryContainer, // background color
-            shape: BoxShape.circle, // circular background
-          ),
-          child: IconButton(
-            icon: const Icon(Icons.notifications_outlined),
-            color: Colors.white, // icon color
-            onPressed: () {},
-          ),
+        Stack(
+          clipBehavior: Clip.none,
+          children: [
+            Container(
+              decoration: const BoxDecoration(
+                color: Color(0xff0A0A0A),
+                shape: BoxShape.circle,
+              ),
+              child: IconButton(
+                icon: const Icon(Icons.notifications_outlined),
+                color: Colors.white,
+                onPressed: () {},
+              ),
+            ),
+
+            Positioned(
+              right: 4,
+              top: 4,
+              child: Container(
+                width: 7,
+                height: 7,
+                decoration: BoxDecoration(
+                  color: Color(0xffff6900),
+                  shape: BoxShape.circle,
+                ),
+              ),
+            ),
+          ],
         ),
       ],
       flexibleSpace: FlexibleSpaceBar(
         background: Transform.rotate(
-          angle: 3.1416 / 3, // 45 degrees clockwise (in radians)
+          angle: 3.1416 / 3,
           child: Container(
             decoration: BoxDecoration(
               image: DecorationImage(
-                image: AssetImage('assets/icons/calls/background.png'),
+                image: AssetImage(AppImages.background),
                 fit: BoxFit.fill,
                 alignment: Alignment.bottomCenter,
               ),
@@ -64,23 +81,14 @@ class DashboardAppbar extends StatelessWidget {
             Column(
               mainAxisSize: MainAxisSize.min,
               crossAxisAlignment: CrossAxisAlignment.start,
-              children: const [
+              children: [
                 Text(
-                  'Welcome Back',
-                  style: TextStyle(
-                    fontSize: 12,
-                    fontWeight: FontWeight.w400,
-                    color: Colors.white,
+                  AppText.welcomeBack,
+                  style: AppTextStyle.regularXs.copyWith(
+                    color: AppTextStyle.regularXs.color?.withValues(alpha: 0.4),
                   ),
                 ),
-                Text(
-                  'Alex Morgan',
-                  style: TextStyle(
-                    fontSize: 18,
-                    fontWeight: FontWeight.w700,
-                    color: Colors.white,
-                  ),
-                ),
+                Text('Alex Morgan', style: AppTextStyle.boldMd2),
               ],
             ),
           ],

@@ -31,13 +31,8 @@ class MockJobsData {
     '67 BGC, Taguig',
   ];
 
-  static final _documentUrls = [
-    'https://example.com/doc1.pdf',
-    'https://example.com/doc2.pdf',
-    'https://example.com/doc3.pdf',
-  ];
-
-  static final _statuses = ['pending', 'in_progress', 'completed', 'cancelled'];
+  static final _documentUrls = ['LEU-FKE-E'];
+  static final _statuses = ["Change for Tomorrow", "Canceled", "Today"];
 
   /// Generate a single mock job
   static JobModel generateJob(int index) {
@@ -52,9 +47,7 @@ class MockJobsData {
           .subtract(Duration(days: _random.nextInt(14)))
           .millisecondsSinceEpoch,
       status: _statuses[_random.nextInt(_statuses.length)],
-      documentUrl: _random.nextBool()
-          ? _documentUrls[_random.nextInt(_documentUrls.length)]
-          : null,
+      documentUrl: _documentUrls[_random.nextInt(_documentUrls.length)],
     );
   }
 

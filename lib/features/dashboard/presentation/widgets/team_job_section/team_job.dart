@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:revo/core/appdesign/design_tokens.dart';
 import 'package:revo/features/dashboard/presentation/widgets/team_job_section/info_card.dart';
 import 'package:revo/features/dashboard/presentation/widgets/team_job_section/member_avatars.dart';
 
@@ -40,10 +41,7 @@ class TeamJob extends StatelessWidget {
                   context,
                 ).colorScheme.primary.withValues(alpha: .05),
                 textColor: Colors.white,
-                onTap: () {
-                  // extra callback if needed
-                  print("Add member tapped");
-                },
+                onTap: () {},
               ),
               ButtonCard(
                 content: Text.rich(
@@ -59,10 +57,10 @@ class TeamJob extends StatelessWidget {
                       ),
                       TextSpan(
                         text: "Total",
-                        style: TextStyle(
-                          fontSize: 16,
-                          color: Colors.white,
-                          fontWeight: FontWeight.w400,
+                        style: AppTextStyle.regularMd.copyWith(
+                          color: AppTextStyle.regularMd.color?.withValues(
+                            alpha: 0.4,
+                          ),
                         ),
                       ),
                     ],
@@ -76,9 +74,7 @@ class TeamJob extends StatelessWidget {
                   context,
                 ).colorScheme.secondary.withValues(alpha: .05),
                 textColor: Colors.white,
-                onTap: () {
-                  print("Add project tapped");
-                },
+                onTap: () {},
               ),
             ],
           ),

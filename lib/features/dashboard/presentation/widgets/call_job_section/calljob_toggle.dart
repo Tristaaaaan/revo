@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:revo/common/component/button/text_button.dart';
 import 'package:revo/common/component/button/toggle_button.dart';
 import 'package:revo/core/appdesign/design_tokens.dart';
+import 'package:revo/core/apptext/app_text.dart';
 import 'package:revo/features/dashboard/presentation/cubit/toggle_cubit/toggle_cubit.dart';
 
 class CallsJobsToggle extends StatelessWidget {
@@ -18,6 +19,7 @@ class CallsJobsToggle extends StatelessWidget {
               Row(
                 children: [
                   Container(
+                    width: 250,
                     margin: const EdgeInsets.symmetric(vertical: 16),
                     decoration: BoxDecoration(
                       color: const Color(0xff111315),
@@ -25,25 +27,30 @@ class CallsJobsToggle extends StatelessWidget {
                     ),
                     child: Row(
                       children: [
-                        ToggleButton(
-                          selectedColor: Theme.of(
-                            context,
-                          ).colorScheme.secondaryContainer,
-                          label: 'Recent Calls',
-                          selected: state == CallJobToggleOption.recentCalls,
-                          onTap: () => context
-                              .read<CallJobToggleCubit>()
-                              .select(CallJobToggleOption.recentCalls),
+                        Expanded(
+                          child: ToggleButton(
+                            selectedColor: Theme.of(
+                              context,
+                            ).colorScheme.secondaryContainer,
+                            label: AppText.recentCalls,
+                            selected: state == CallJobToggleOption.recentCalls,
+                            onTap: () => context
+                                .read<CallJobToggleCubit>()
+                                .select(CallJobToggleOption.recentCalls),
+                          ),
                         ),
-                        ToggleButton(
-                          selectedColor: Theme.of(
-                            context,
-                          ).colorScheme.secondaryContainer,
-                          label: 'Jobs Scheduled',
-                          selected: state == CallJobToggleOption.jobsScheduled,
-                          onTap: () => context
-                              .read<CallJobToggleCubit>()
-                              .select(CallJobToggleOption.jobsScheduled),
+                        Expanded(
+                          child: ToggleButton(
+                            selectedColor: Theme.of(
+                              context,
+                            ).colorScheme.secondaryContainer,
+                            label: AppText.jobsScheduled,
+                            selected:
+                                state == CallJobToggleOption.jobsScheduled,
+                            onTap: () => context
+                                .read<CallJobToggleCubit>()
+                                .select(CallJobToggleOption.jobsScheduled),
+                          ),
                         ),
                       ],
                     ),

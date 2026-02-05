@@ -7,13 +7,15 @@ class AccessInfo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SliverToBoxAdapter(
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
-        children: [
-          InfoContainer(label: 'Service Area'),
-          InfoContainer(label: 'Job Sources'),
-          InfoContainer(label: 'Walk-in Store'),
-        ],
+      child: Padding(
+        padding: const EdgeInsets.only(top: 12, bottom: 12),
+        child: Row(
+          children: [
+            InfoContainer(label: 'Service Area'),
+            InfoContainer(label: 'Job Sources'),
+            InfoContainer(label: 'Walk-in Store'),
+          ],
+        ),
       ),
     );
   }

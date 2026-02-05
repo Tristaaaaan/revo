@@ -1,19 +1,18 @@
 class AppImages {
   static const basePath = "assets/images/";
 
-  static const noData = "${basePath}undraw_void_wez2.svg";
+  // Icons
+  static const iconPath = "${basePath}icons/";
 
-  static const uploadImage = "${basePath}undraw_image-options_zchk.svg";
+  static const incoming = "${iconPath}incoming.png";
+  static const location = "${iconPath}location.png";
+  static const missed = "${iconPath}missed.png";
+  static const outgoing = "${iconPath}outgoing.png";
+  static const schedule = "${iconPath}schedule.png";
+  static const wave = "${iconPath}wave.png";
 
-  static const errorImage = "${basePath}undraw_cancel_7zdh.svg";
+  // Backgrounds
+  static const backgroundPath = "${basePath}backgrounds/";
 
-  static const thinking = "${basePath}undraw_learning_qt7d.svg";
-
-  static const workHow = "${basePath}undraw_noted_c0zn.svg";
-
-  static const useHow = "${basePath}undraw_check-boxes_ewf2.svg";
-
-  static const winr = "${basePath}undraw_dreamer_gb41.svg";
-
-  static const greetings = "${basePath}undraw_friendly-guy-avatar_dqp5.svg";
+  static const background = "${backgroundPath}background.png";
 }
