@@ -2,6 +2,12 @@
 
 This application enables user to manage business calls with ease.
 
+The app begins with an onboarding page where the user has to create an account to proceed. In here, the user will be asked about their business and some key information about it including the location, the industry they are into, the business number, and they preferred way to be notified.
+
+Once the setup is completed, they will be able to proceed on the dashboard screen where the could see their call history, summary, as well as the jobs scheduled. Once an account is ready, they could setup their account further by having a much detailed settings.
+
+The user can also search, create, and modify their job sources.
+
 ## Folder Structure
 
 ### Top Level
@@ -96,6 +102,14 @@ This collection contains the jobs sources.
 - **Team:** `team` collection
 
 This collection contains the teams/groups.
+
+- **Invoice:** `invoice` collection
+
+This collection contains the invoices.
+
+- **Companies:** `companies` collection
+
+This collection contains the companies.
 
 ## How to Use the Project
 
