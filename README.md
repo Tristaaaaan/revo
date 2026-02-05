@@ -8,6 +8,8 @@ Once the setup is completed, they will be able to proceed on the dashboard scree
 
 The user can also search, create, and modify their job sources.
 
+<img width="1920" height="1080" alt="REVO" src="https://github.com/user-attachments/assets/7764db48-e99c-48a1-96ed-029ac3dc630a" />
+
 ## Folder Structure
 
 ### Top Level
